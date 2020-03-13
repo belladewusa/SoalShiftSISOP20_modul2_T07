@@ -48,7 +48,7 @@ int main(){
 		        	  	}
               		else{
 		            	while ((wait(&status)) > 0);
-		            	sleep(3);
+		            	sleep(7);
 		            	char stage2[999];
 		            	FILE *clap;
 		            	sprintf(stage2,"/home/achsanymous/Desktop/indomie/%s/coba2.txt",direct->d_name);//membuat txt ke-2
