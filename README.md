@@ -11,7 +11,7 @@ membuat sebuah program yang dapat menjalankan serangkaian tugas secara bersamaan
 
 tugas tugas tersebut ialah :
 
-### membuat 2 direktori
+### a. membuat 2 direktori
 program pertama disuruh untuk membuat 2 direktori yang berbeda dengan nama yang telah ditentukan (sedaap dan indomie)
 
     else if (NC2 == 0 && NC3 > 0){
@@ -35,7 +35,7 @@ program pertama disuruh untuk membuat 2 direktori yang berbeda dengan nama yang 
 5. sleep(5); diberi jeda untuk eksekusi
 Baru setelah itu eksekusi dilanjutkan membuat direktori kedua
 
-### membuka zip
+### b. membuka zip
 kedua program diharuskan untuk membuka file jpg.zip yang telah disediakan yang nantinya menjadi folder jpg
 
     else if (NC2 > 0 && NC3 == 0){
@@ -52,7 +52,7 @@ kedua program diharuskan untuk membuka file jpg.zip yang telah disediakan yang n
 
 setelah child ditunjuk program segera mengeksekusi file jpg.zip untuk dibuka yang nantinya akan terbentuk folder jpg
 
-### memisahkan isi dari folder jpg ke 2 folder yang berbeda
+### c. memisahkan isi dari folder jpg ke 2 folder yang berbeda
 
 ketiga program harus memindahkan isi dari folder jpg ke dalam folder sedaap dan indomie berdasarkan petunjuk yang diberikan yaitu memindahkan file kedalam sedaap dan folder kedalam indomie lalu program dibuat membuat file coba1.txt dan dalam 3 detik kembali membuat file coba2.txt di setiap folder yang telah dipindahkan ke folder indomie
 
