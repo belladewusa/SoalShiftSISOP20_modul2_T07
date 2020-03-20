@@ -111,8 +111,8 @@ ketiga program harus memindahkan isi dari folder jpg ke dalam folder sedaap dan 
 
 
 1. mengecek isi folder jpg
-2. jika berisi foto maka akan di pindahkan ke sedaap
-3. bila berisi folder akan dipindahkan ke indomie
+2. jika berisi foto maka akan di pindahkan ke folder sedaap
+3. bila berisi folder akan dipindahkan ke folder indomie
 4. setelah folder dipindahkan akan dibuat file txt dan dalam interval 3 detik(seperti yang diminta soal) akan dibuat file txt yang kedua 
 5. hal ini dilakukan hingga tidak ada item didalam folder jpg
 
