@@ -2,6 +2,14 @@
 
 ## SOAL 3
 
+membuat sebuah program yang dapat menjalankan serangkaian tugas secara bersamaan dengan ketentuan sebagai berikut 
+- Tidak boleh memakai system().
+- Tidak boleh memakai function C mkdir() ataupun rename().
+- Gunakan exec dan fork
+- Direktori “.” dan “..” tidak termasuk
+
+tugas tugas tersebut ialah :
+
 ### membuat 2 direktori
 program pertama disuruh untuk membuat 2 direktori yang berbeda dengan nama yang telah ditentukan (sedaap dan indomie)
 
