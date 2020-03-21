@@ -1,6 +1,35 @@
 # SoalShiftSISOP20_modul2_T07
 
 
+
+## SOAL 1
+Buatlah program C yang menyerupai crontab untuk menjalankan script bash dengan ketentuan sebagai berikut: a. Program menerima 4 argumen berupa: i. Detik: 0-59 atau * (any value) ii. Menit: 0-59 atau * (any value) iii. Jam: 0-23 atau * (any value) iv. Path file .sh b. Program akan mengeluarkan pesan error jika argumen yang diberikan tidak sesuai c. Program hanya menerima 1 config cron d. Program berjalan di background (daemon) e. Tidak boleh menggunakan fungsi system()
+
+PENYELESAIAN
+Source Code : [source](https://github.com/belladewusa/SoalShiftSISOP20_modul2_T07/blob/master/soal1/soal1.c)
+
+Di sini saya menggunakan template daemon dari pengerjaan soal latihan 2 sebelumnya. Seperti biasa perlu adanya beberapa library yang akan digunakan fungsinya di masukan dalam program .
+Argc yaitu argument counter yang akan menghitung argument yang diterima. Argv yaitu untuk menerima argument yang ada dan disimpan ke array. Kemudian saya buatkan jika argument yang dimasukan tidak sama dengan 5 maka akan keluar salah bangeeettt , karena total keseluruhan ada 5 termaksud tempat program dijalankan/ Namanya sendiri. 
+Selanjutnya time_t dan struct , untuk deklarasi objek yang memanfaatkan clas dan struct yang ada di library time.h 
+Pid_t variable untuk menyimpan PID, Pid untuk menyimpan PID dari child process. 
+Selanjutnya kondisi if pada template daemon, if pertama keluar saat fork gagal dan yang kedua nilai variable pid adalah PID dari child process sehingga keluar saat fork berhasil. 
+Mengubah working directory ke root menggunakan chdir. Hingga close masih dalam template daemon yang sesuai Berikutnya step membuat daemon Time dan info digunakan untuk proses pengambilan data waktu system 
+Pengecekan waktu . kita menggunakan atoi untuk mengubah string ke integer , kemudian STRCMP untuk membandingkan 2 string dan akan menghasilkan integer serta akan menghasilkan nilai 0 jika keduanya sama.
+ Membuat child proses menggunakan fork, kemudian Child menjalankan bash. Untuk beberapa fungsi yang hilang/ditambahkan sebelumnya hanya untuk membedakan dengan codingan orang lain agar tidak dikira plagiat
+
+![OUTPUT](https://github.com/belladewusa/SoalShiftSISOP20_modul2_T07/blob/master/NO1.png)
+
+
+KENDALA 
+terbatasnya waktu belajar dan ilmu yang dipunya tiap anak yang berbeda-beda. Kendala untuk soal no. 1 ini yaitu saya belum yakin apakah runnya berhasil, karena sebelumnya saya coding sendiri banyak error dalam penempatan kurung , harusnya saya cek sudah benar. 
+
+
+## SOAL 2
+
+KENDALA
+Masih terbatas dalam pengerjaan , karena bingung harus menggunakan fungsi apa saja dengan ilmu yang masih dasar
+
+
 ## SOAL 3
 
 membuat sebuah program yang dapat menjalankan serangkaian tugas secara bersamaan dengan ketentuan sebagai berikut 
