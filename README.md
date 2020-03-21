@@ -168,7 +168,10 @@ terbatasnya waktu belajar dan ilmu yang dipunya tiap anak yang berbeda-beda. Ken
 
 ## SOAL 2
 
+
 KENDALA
+
+
 Masih terbatas dalam pengerjaan , karena bingung harus menggunakan fungsi apa saja dengan ilmu yang masih dasar
 
 
