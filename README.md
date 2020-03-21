@@ -161,6 +161,8 @@ Pengecekan waktu . kita menggunakan atoi untuk mengubah string ke integer , kemu
 
 
 KENDALA 
+
+
 terbatasnya waktu belajar dan ilmu yang dipunya tiap anak yang berbeda-beda. Kendala untuk soal no. 1 ini yaitu saya belum yakin apakah runnya berhasil, karena sebelumnya saya coding sendiri banyak error dalam penempatan kurung , harusnya saya cek sudah benar. 
 
 
@@ -286,7 +288,20 @@ ketiga program harus memindahkan isi dari folder jpg ke dalam folder sedaap dan 
 5. hal ini dilakukan hingga tidak ada item didalam folder jpg
 
 
-## kendala
+![OUTPUT](https://github.com/belladewusa/SoalShiftSISOP20_modul2_T07/blob/master/3A.png)
+
+![OUTPUT](https://github.com/belladewusa/SoalShiftSISOP20_modul2_T07/blob/master/3B.png)
+
+![OUTPUT](https://github.com/belladewusa/SoalShiftSISOP20_modul2_T07/blob/master/3C.png)
+
+![OUTPUT](https://github.com/belladewusa/SoalShiftSISOP20_modul2_T07/blob/master/3D.png)
+
+![OUTPUT](https://github.com/belladewusa/SoalShiftSISOP20_modul2_T07/blob/master/3E.png)
+
+
+KENDALA
+
+
 soal no 2 belum dapat kami kerjakan karena tingkat kesulitannya problemnya belum bisa kammi temukan solusinya , terutama karena faktor pengetahuan coding yang belum cukup. 
 beberapa anak yang sibuk karena mengurus departemen dan kegiatan lainnya sangat sibuk, terutama dengan kondisi yang dimana sumber daya manusia IT yang sedikit sehingga anak-anak yang sibuk ditambah dengan tugas lainnya mayoritas belum bisa menyelesaikan seluruh soal dengan sempurna.
 
