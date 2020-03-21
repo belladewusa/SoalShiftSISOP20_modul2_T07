@@ -292,6 +292,7 @@ ketiga program harus memindahkan isi dari folder jpg ke dalam folder sedaap dan 
 
 
 bentuk awal:
+
 ![OUTPUT](https://github.com/belladewusa/SoalShiftSISOP20_modul2_T07/blob/master/3A.png)
 
 bentuk akhir :
