@@ -6,7 +6,147 @@
 Buatlah program C yang menyerupai crontab untuk menjalankan script bash dengan ketentuan sebagai berikut: a. Program menerima 4 argumen berupa: i. Detik: 0-59 atau * (any value) ii. Menit: 0-59 atau * (any value) iii. Jam: 0-23 atau * (any value) iv. Path file .sh b. Program akan mengeluarkan pesan error jika argumen yang diberikan tidak sesuai c. Program hanya menerima 1 config cron d. Program berjalan di background (daemon) e. Tidak boleh menggunakan fungsi system()
 
 PENYELESAIAN
-Source Code : [source](https://github.com/belladewusa/SoalShiftSISOP20_modul2_T07/blob/master/soal1/soal1.c)
+
+Source Code : 
+
+		#include <sys/types.h>
+		#include <sys/stat.h>
+		#include <stdio.h>
+		#include <stdlib.h>
+		#include <fcntl.h>
+		#include <errno.h>
+		#include <unistd.h>
+		#include <syslog.h>
+		#include <string.h>
+		#include <time.h>
+
+		int
+		main (int argc, char *argv[])
+		{
+
+		  if (argc != 5)
+		    {
+		    printf ("salah bangeeet\n");
+		    exit (EXIT_FAILURE);
+		    }
+
+		      time_t rawtime;
+		      struct tm *info;
+
+		      pid_t pid, sid;        // Variabel untuk menyimpan PID
+
+		      pid = fork ();        // Menyimpan PID dari Child Process
+
+		      /* Keluar saat fork gagal
+		       * (nilai variabel pid < 0) */
+
+		    if (pid < 0)
+			{
+			exit (EXIT_FAILURE);
+			}
+
+		      /* Keluar saat fork berhasil
+		       * (nilai variabel pid adalah PID dari child process) */
+
+		    if (pid > 0)
+			{
+			exit (EXIT_SUCCESS);
+			}
+
+		      umask (0);
+
+		      sid = setsid ();
+
+		    if (sid < 0)
+			{
+			exit (EXIT_FAILURE);
+			}
+
+		    if ((chdir ("/")) < 0)
+			{
+			exit (EXIT_FAILURE);
+			}
+
+		      close (STDIN_FILENO);
+		      close (STDOUT_FILENO);
+		      close (STDERR_FILENO);
+
+		  while (1)
+
+		  {
+		      time (&rawtime);
+		      info = localtime (&rawtime);
+
+		    if
+			(
+			(atoi (argv[1]) == info->tm_sec || ( strcmp (argv[1],"*"))==0)
+			&&
+			(atoi (argv[2]) == info->tm_min || ( strcmp (argv[2],"*"))==0)
+			&&
+			(atoi (argv[3]) == info->tm_hour || ( strcmp (argv[3],"*"))==0)
+			)
+
+			    {
+			    pid_t child_id;
+			    child_id = fork ();
+			    int status;
+
+				if (child_id == 0)
+				    {
+				    char *bella[] = {"bash", argv[4], NULL};
+				    execv ("bin/bash", bella);
+				    }
+			    }
+
+		    sleep (2);
+		  }      
+		}
+
+
+
+						sprintf(stage2,"/home/achsanymous/Desktop/indomie/%s/coba2.txt",direct->d_name);		            	clap = fopen(stage2, "w");
+						fclose(clap);
+						exit(0);
+							}}
+				else{
+						 while ((wait(&status)) > 0);
+							printf("loading . . . ");
+							printf(" ");
+						      exit(0);
+						    }}}
+			else{
+				while ((wait(&status)) > 0);
+				if(fork() == 0){
+				while ((wait(&status)) > 0);
+				char stage3[999];
+				sprintf(stage3,"/home/achsanymous/Desktop/jpg/%s",direct->d_name);
+				char* statement[] = {"mv", stage3,"/home/achsanymous/Desktop/sedaap/", NULL};//memindahkan file ke sedaap
+				execv("/bin/mv", statement);
+					}}}}}
+			else if (NC2 == 0 && NC3 > 0){
+		    while ((wait(&status)) > 0);
+		    if (NC1 == 0){
+			printf("create file indomie");
+		      char *statement[] = {"mkdir", "-p","/achsanymous/Desktop/indomie", NULL};      execv("/bin/mkdir", statement);
+
+		   }
+		    else{
+		      while ((wait(&status)) > 0);
+			printf("create file sedaap");
+		      sleep(5);
+		      char *statement[] = {"mkdir", "-p","/home/achsanymous/Desktop/sedaap", NULL};      execv("/bin/mkdir", statement);
+		}} 
+			else if (NC2 > 0 && NC3 == 0){
+		    char* statement[] = {"unzip", "-oq","/home/achsanymous/Desktop/jpg.zip", NULL};
+			printf("opening package . . .");
+		    execv("/usr/bin/unzip", statement);
+			}
+			return 0;
+		}
+
+
+PEMBAHASAN
+
 
 Di sini saya menggunakan template daemon dari pengerjaan soal latihan 2 sebelumnya. Seperti biasa perlu adanya beberapa library yang akan digunakan fungsinya di masukan dalam program .
 Argc yaitu argument counter yang akan menghitung argument yang diterima. Argv yaitu untuk menerima argument yang ada dan disimpan ke array. Kemudian saya buatkan jika argument yang dimasukan tidak sama dengan 5 maka akan keluar salah bangeeettt , karena total keseluruhan ada 5 termaksud tempat program dijalankan/ Namanya sendiri. 
